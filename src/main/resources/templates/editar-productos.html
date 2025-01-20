@@ -18,7 +18,7 @@
         </div>
 
         <div class="flex flex-row my-0.5">
-            <div class="basis-1/2">Nombre</div>
+            <div class="basis-1/2">Código</div>
             <div class="basis-1/2">
                 <input class="shadow appearance-none border rounded w-1/2 py-2 px-3 text-gray-700 leading-tight"
                        th:field="*{codigo}" readonly/>
@@ -38,6 +38,21 @@
             <div class="basis-1/2">
                 <input class="shadow appearance-none border rounded w-1/2 py-2 px-3 text-gray-700 leading-tight"
                        th:field="*{precio}" />
+            </div>
+        </div>
+
+        <div class="flex flex-row my-0.5">
+            <div class="basis-1/2">
+                <label for="idFabricante">Fabricante:</label>
+            </div>
+
+            <div class="basis-1/2">
+                <select id="idFabricante" th:field="*{id_fabricante}">
+                    <option th:each="fab : ${fabricantes}"
+                            th:value="${fab.codigo}"
+                            th:text="${fab.nombre}">
+                    </option>
+                </select>
             </div>
         </div>
     </form>
