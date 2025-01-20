@@ -57,4 +57,5 @@ public class Producto {
                 ", id_fabricante=" + id_fabricante +
                 '}';
     }
+
 }
